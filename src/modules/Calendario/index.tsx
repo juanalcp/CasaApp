@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-const Comidas = () => {
+const Calendario = () => {
   return (
     <View>
-      <Text style={{}}>Prueba comidas</Text>
+      <Text style={{}}>Prueba calendario</Text>
     </View>
   );
 };
 
-export default Comidas;
+export default Calendario;
