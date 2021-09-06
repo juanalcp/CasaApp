@@ -10,20 +10,20 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     marginBottom: 60,
-    marginTop: 30,
+    marginTop: 30
   },
 
   squaredButtonImage: {
     width: SIDE,
-    height: SIDE,
+    height: SIDE
   },
   squaredButton: {
-    margin: 10,
+    margin: 10
   },
   title: { fontSize: 30, marginTop: windowHeight },
   grid: {
-    marginLeft: windowWidth / 14,
-  },
+    marginLeft: windowWidth / 14
+  }
 });
 
 export default styles;

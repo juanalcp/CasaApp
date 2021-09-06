@@ -7,15 +7,21 @@ const styles = StyleSheet.create({
   appContainer: {
     width: windowWidth,
     height: windowHeight,
-    backgroundColor: "white",
+    backgroundColor: "white"
   },
   globalContainer: {
     flex: 1,
-    alignItems: "center",
+    alignItems: "center"
   },
   globalTextStyle: {
-    color: "white",
+    color: "white"
   },
+  backArrow: {
+    width: 40,
+    height: 40,
+    marginLeft: 10,
+    marginTop: 30
+  }
 });
 
 export default styles;

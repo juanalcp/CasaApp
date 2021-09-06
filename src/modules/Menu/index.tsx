@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, ScrollView, Text } from "react-native";
+import { View, Image, Text } from "react-native";
 import SquaredButton from "../../components/SquaredButton";
 import Grid from "../../components/Grid";
 import useMenuButtons from "./useMenuButtons";
@@ -20,7 +20,7 @@ const Menu = () => {
     disabled?: boolean,
     backgroundColor?: string,
     isWide?: boolean,
-    key?:number
+    key?: number
   ) => (
     <SquaredButton
       image={image}
@@ -33,7 +33,7 @@ const Menu = () => {
     />
   );
 
-  const menuButtons = menuButtonsProps.map((prop,index) =>
+  const menuButtons = menuButtonsProps.map((prop, index) =>
     getMenuSquaredButton(
       prop.image,
       prop.title,

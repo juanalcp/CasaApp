@@ -1,24 +1,43 @@
 import React from "react";
-import { View, Text } from "react-native";
-import axios from "axios";
-import { useState } from "react";
+import { View, Text, ActivityIndicator } from "react-native";
+import useCalendario from "./useCalendario";
+import { DAYS } from "../../constants/lists";
+import DayMeals from "../../components/DayMeals";
 
 const Calendario = () => {
-  const [comida, setComida] = useState();
-  const [cena, setCena] = useState();
-  axios.get('http://vps-574f0f93.vps.ovh.net:1337/comida').then((response: AxiosResponse) => {
-    console.log(response.data);
-    setComida(response.data)
-   })
-   axios.get('http://vps-574f0f93.vps.ovh.net:1337/cena').then((response: AxiosResponse) => {
-    console.log(response.data);
-    setCena(response.data)
-   })
-  return (
-    <View>
-      <Text style={{}}>Prueba calendario</Text>
-    </View>
-  );
+  const { meals } = useCalendario();
+
+  if (meals.length !== 0) {
+    const calendarMeals = DAYS.map((dia, index) => {
+      const mealsKeys = Object.keys(meals);
+      return (
+        <DayMeals
+          day={dia}
+          comida={meals[mealsKeys[index]].comida}
+          cena={meals[mealsKeys[index]].cena}
+          key={index}
+        />
+      );
+    });
+
+    return (
+      <View style={{ flex: 1 }}>
+        <Text style={{}}>{calendarMeals}</Text>
+      </View>
+    );
+  } else {
+    return (
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
 };
 
 export default Calendario;

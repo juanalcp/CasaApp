@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, TouchableOpacity } from "react-native";
+import { TouchableOpacity, View, Image } from "react-native";
 import { Route } from "react-router-native";
 import styles from "./styles";
 import ROUTES from "./routes";
@@ -23,16 +23,16 @@ const Router = () => {
     ));
     return renderRoutes;
   };
-  /*{!isRoot ? (
-        <TouchableOpacity onPress={() => history.push("/")}>
-          <Image
-            style={{ width: 20, height: 20 }}
-            source={require("../../../assets/app/back-button.png")}
-          />
-        </TouchableOpacity>
-      ) : null}*/
   return (
     <View style={styles.appContainer}>
+      {!isRoot ? (
+        <TouchableOpacity onPress={() => history.push("/")}>
+          <Image
+            style={styles.backArrow}
+            source={require("../../assets/app/back-button.png")}
+          />
+        </TouchableOpacity>
+      ) : null}
       <View style={styles.globalContainer}>{getRoutes()}</View>
     </View>
   );
