@@ -8,7 +8,7 @@ const Comidas = () => {
 
   return (
     <View>
-      <Text style={{}}>{comida}</Text>
+      <Text style={{}}>{"comida"}</Text>
     </View>
   );
 };
