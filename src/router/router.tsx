@@ -1,9 +1,8 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Image, TouchableOpacity } from "react-native";
 import { Route } from "react-router-native";
 import styles from "./styles";
 import ROUTES from "./routes";
-import Button from "../components/Button";
 import useCurrentLocation from "../hooks/useActualLocation";
 import { useHistory } from "react-router";
 
@@ -24,12 +23,16 @@ const Router = () => {
     ));
     return renderRoutes;
   };
-
+  /*{!isRoot ? (
+        <TouchableOpacity onPress={() => history.push("/")}>
+          <Image
+            style={{ width: 20, height: 20 }}
+            source={require("../../../assets/app/back-button.png")}
+          />
+        </TouchableOpacity>
+      ) : null}*/
   return (
     <View style={styles.appContainer}>
-      {!isRoot ? (
-        <Button title={"Back"} onPress={() => history.push("/")} />
-      ) : null}
       <View style={styles.globalContainer}>{getRoutes()}</View>
     </View>
   );
