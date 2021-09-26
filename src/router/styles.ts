@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
   appContainer: {
     width: windowWidth,
     height: windowHeight,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    marginTop: 40
   },
   globalContainer: {
     flex: 1,
@@ -17,10 +18,9 @@ const styles = StyleSheet.create({
     color: "white"
   },
   backArrow: {
-    width: 40,
-    height: 40,
-    marginLeft: 10,
-    marginTop: 30
+    width: 35,
+    height: 35,
+    marginLeft: 20
   }
 });
 

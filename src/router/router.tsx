@@ -25,14 +25,16 @@ const Router = () => {
   };
   return (
     <View style={styles.appContainer}>
-      {!isRoot ? (
-        <TouchableOpacity onPress={() => history.push("/")}>
-          <Image
-            style={styles.backArrow}
-            source={require("../../assets/app/back-button.png")}
-          />
-        </TouchableOpacity>
-      ) : null}
+      <View style={{ position: "absolute" }}>
+        {!isRoot ? (
+          <TouchableOpacity onPress={() => history.push("/")}>
+            <Image
+              style={styles.backArrow}
+              source={require("../../assets/app/back-button.png")}
+            />
+          </TouchableOpacity>
+        ) : null}
+      </View>
       <View style={styles.globalContainer}>{getRoutes()}</View>
     </View>
   );

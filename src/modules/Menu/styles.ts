@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions } from "react-native";
 const windowHeight = Dimensions.get("window").height / 10;
 const windowWidth = Dimensions.get("window").width;
 
-const SIDE = 50;
+const SIDE = 40;
 
 const styles = StyleSheet.create({
   houseImage: {

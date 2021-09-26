@@ -12,14 +12,14 @@ const DayMeals: React.FC<DayMeals> = ({ day, comida, cena }) => {
   return (
     <View
       style={{
-        height: height / 8,
+        height: height / 10,
         width: width,
         alignItems: "center",
         padding: 20
       }}
     >
       <View style={{ marginBottom: 5 }}>
-        <Text>{day}</Text>
+        <Text style={{ fontWeight: "bold" }}>{day}</Text>
       </View>
       <View
         style={{

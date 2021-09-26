@@ -3,6 +3,7 @@ import { View, Text, ActivityIndicator } from "react-native";
 import useCalendario from "./useCalendario";
 import { DAYS } from "../../constants/lists";
 import DayMeals from "../../components/DayMeals";
+import styles from "./styles";
 
 const Calendario = () => {
   const { meals } = useCalendario();
@@ -22,7 +23,12 @@ const Calendario = () => {
 
     return (
       <View style={{ flex: 1 }}>
-        <Text style={{}}>{calendarMeals}</Text>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>Calendario</Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={{}}>{calendarMeals}</Text>
+        </View>
       </View>
     );
   } else {
@@ -34,7 +40,7 @@ const Calendario = () => {
           justifyContent: "center"
         }}
       >
-        <ActivityIndicator size="large" />
+        <ActivityIndicator size="large" color="red" />
       </View>
     );
   }
