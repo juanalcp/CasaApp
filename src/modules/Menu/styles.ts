@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const windowHeight = Dimensions.get("window").height / 10;
+const windowHeight = Dimensions.get("window").height / 15;
 const windowWidth = Dimensions.get("window").width;
 
 const SIDE = 40;
